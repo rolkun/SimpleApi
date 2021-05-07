@@ -15,21 +15,21 @@ variables:
 steps:
 
 - task: DotNetCoreCLI@2
-  diplayname: Restore nuget packages
-  inputs:
+  diplayname: 'restore nuget packages'
+    inputs:
     command: 'restore'
     projects: '**/*.csproj'
     includeNuGetOrg: true
 
 - task: DotNetCoreCLI@2
-  diplayname: Build 
+  diplayname: 'dotnet build --configuration $(buildConfiguration)' 
   inputs:
     command: build
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  diplayname: Test 
+  diplayname: 'dotnet test --configuration $(buildConfiguration)' 
   inputs:
     command: test
     projects: '**/*Test/*.csproj'
