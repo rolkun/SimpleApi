@@ -5,13 +5,13 @@ using Microsoft.Extensions.Logging;
 
 namespace SimpleApi.Test
 {
-    public class UnitTest1
+    public class ValuesControllerTest
     {
         Mock<ILogger<ValuesController>> logger;
 
         ValuesController controller;
 
-        public UnitTest1()
+        public ValuesControllerTest()
         {
             logger = new Mock<ILogger<ValuesController>>();
             this.controller = new ValuesController(this.logger.Object);
