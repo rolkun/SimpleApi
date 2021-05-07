@@ -16,7 +16,7 @@ steps:
 
 - task: DotNetCoreCLI@2
   diplayname: 'restore nuget packages'
-    inputs:
+  inputs:
     command: 'restore'
     projects: '**/*.csproj'
     includeNuGetOrg: true
