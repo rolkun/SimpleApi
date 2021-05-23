@@ -18,6 +18,14 @@ namespace SimpleApi.Test
         }
 
         [Fact]
+        public void GetAllShouldCotainMyName()
+        {
+            var result = controller.Get();
+
+            Assert.Contains("Roland Kunz", result.Value);
+        }
+
+        [Fact]
         public void GetByNumber1ShouldReturnMyName()
         {
             var result = controller.Get(1);
