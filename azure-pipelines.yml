@@ -21,6 +21,10 @@ steps:
     projects: '**/*.csproj'
     includeNuGetOrg: true
 
+
+- script: dotnet build --configuration $(buildConfiguration)
+  displayname: 'dotnet build $(buildConfiguration)'
+
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build --configuration $(buildConfiguration)' 
   inputs:
