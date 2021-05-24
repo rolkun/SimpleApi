@@ -23,7 +23,7 @@ steps:
 
 
 - script: dotnet build --configuration $(buildConfiguration)
-  displayname: 'dotnet build $(buildConfiguration)'
+  displayName: 'dotnet build $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build --configuration $(buildConfiguration)' 
